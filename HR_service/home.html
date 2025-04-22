@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Div@ Service</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="header.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!--Header of Menu-->
+    <div>
+        <div class="container_menu">
+            <div>
+                <h1>2Div</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="box_button">
+                <div class="toggle-wrapper" id="languageToggle">
+                    <div class="toggle-highlight"></div>
+                    <div class="toggle-label" id="engLabel">ENG</div>
+                    <div class="toggle-label" id="khLabel">KH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById("languageToggle");
+        const engLabel = document.getElementById("engLabel");
+        const khLabel = document.getElementById("khLabel");
+
+        let isEnglish = true;
+
+        toggle.addEventListener("click", () => {
+            isEnglish = !isEnglish;
+            toggle.classList.toggle("active");
+
+            if (isEnglish) {
+                engLabel.classList.add("active-text");
+                khLabel.classList.remove("active-text");
+            } else {
+                khLabel.classList.add("active-text");
+                engLabel.classList.remove("active-text");
+            }
+        });
+
+        // Set initial active state
+        engLabel.classList.add("active-text");
+    </script>
+
+    <!-- Information of home page -->
+    <div class="info_first">
+        <div class="info_para">
+            <h1>Welcome to </h1>
+            <h2>My Service</h2>
+            <p>
+                Lorem Ipsum is simply dummy text <br>
+                of the printing and typesetting industry. <br>
+                Lorem Ipsum has been the industry's <br>
+                standard dummy text ever since the 1500s, <br>
+                when an unknown printer took a galley of <br>
+                type and scrambled it to make a type specimen book. <br>
+            </p>
+            <button class="btnRATE" onclick="openrateModal()"> Rate </button>
+            <div style="margin-top: 20px;">
+                <h4>1 Star: <span>0</span></h4>
+                <h4>2 Star: <span>0</span></h4>
+                <h4>3 Star: <span>0</span></h4>
+                <h4>4 Star: <span>0</span></h4>
+                <h4>5 Star: <span>0</span></h4>
+             </div>
+        </div>
+
+        <div class="image_svg1">
+            <img src="img/svg1.webp" alt="">
+        </div>
+    </div>
+
+    <!--Modal of Rating -->
+
+    <div id="servicemodal" class="servicemodal">
+        <div class="modal_content">
+            <div class="boxicons">
+                <i class='bx bxs-star' data-rating="1"></i>
+                <i class='bx bxs-star' data-rating="2"></i>
+                <i class='bx bxs-star' data-rating="3"></i>
+                <i class='bx bxs-star' data-rating="4"></i>
+                <i class='bx bxs-star' data-rating="5"></i>
+            </div>
+            <h1>We need your feedback</h1>
+            <p>How would you rate your experience 
+                with the website today? 
+            </p>
+            <button class="btnSub " id="rateSubmit" > Submit </button>
+        </div>
+    </div>
+
+    <script>
+
+        function openrateModal(){
+            const modal = document.getElementById('servicemodal');
+            modal.style.display = 'block';
+        }
+
+        window.addEventListener("click", function(event) {
+        const modal = document.getElementById('servicemodal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+        
+    const stars = document.querySelectorAll('.bx.bxs-star');
+        const submitButton = document.getElementById('rateSubmit');
+        let currentRating = 0;
+        let submissionCount = 0;
+
+        const starCounts = [0, 0, 0, 0, 0];
+        const starCountElements = [
+            document.querySelector('.info_para h4:nth-of-type(1) span'),
+            document.querySelector('.info_para h4:nth-of-type(2) span'),
+            document.querySelector('.info_para h4:nth-of-type(3) span'),
+            document.querySelector('.info_para h4:nth-of-type(4) span'),
+            document.querySelector('.info_para h4:nth-of-type(5) span')
+        ];
+
+        stars.forEach(star => {
+            star.addEventListener('click', function () {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                currentRating = rating;
+
+                stars.forEach(s => s.classList.remove('selected'));
+
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+
+        submitButton.addEventListener('click', function () {
+            if (currentRating > 0) {
+                starCounts[currentRating - 1]++;
+                submissionCount++;
+                localStorage.setItem('starRatings', JSON.stringify(starCounts));
+                starCountElements.forEach((element, index) => {
+                    element.textContent = starCounts[index];
+                });
+                stars.forEach(s => s.classList.remove('selected'));
+                currentRating = 0;
+                modal.style.display = 'none'; // Close the modal here
+            } else {
+                alert('Please select a star rating before submitting.');
+            }
+        });
+
+    </script>
+
+    <!--Information About-->
+    <div class="who_we">
+        <div class="image_svg2">
+            <img src="img/svg2.png" alt="">
+        </div>
+        <div class="who_content">
+            <h1>Who we are?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text <br>
+                of the printing and typesetting industry. <br>
+                Lorem Ipsum has been the industry's <br>
+                standard dummy text ever since the 1500s, <br>
+                when an unknown printer took a galley of <br>
+                type and scrambled it to make a type specimen book. <br>
+            </p>
+            <button class="btnMore" id="learn_more">Learn More</button>
+        </div>
+    </div>
+
+    <script>
+        const learn = document.getElementById('learn_more');
+        learn.addEventListener('click', function () {
+            window.location.href = 'about.html';
+        });
+    </script>
+
+
+    <!--Discover-->
+    <div class="discover">
+        <div class="discover_content">
+            <h1>Discover</h1>
+            <p>
+                Lorem Ipsum is simply dummy text <br>
+                of the printing and typesetting industry. <br>
+                Lorem Ipsum has been the industry's <br>
+                standard dummy text ever since the 1500s, <br>
+                when an unknown printer took a galley of <br>
+                type and scrambled it to make a type specimen book. <br>
+            </p>
+        </div>
+        <div class="image_svg3">
+            <img src="img/svg3.avif" alt="">
+        </div>
+    </div>
+
+    <!--Service of page -->
+    <div class="service_content">
+        <div class="info_service">
+            <h1>Our Service</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="grid_box">
+
+           <div class="box_service">
+                <img src="img/web-design.png" title="Web Design">
+                <h2>Web Design</h2>
+           </div>
+
+           <div class="box_service">
+                <img src="img/logo.png" title="Design LoGo">
+                <h2>Design LoGo</h2>
+           </div>
+
+           <div class="box_service">
+                <img src="img/flow.png" title="Design Flow">
+                <h2>Design Flow</h2>
+           </div>
+
+           <div class="box_service">
+                <img src="img/video.png" title="Video Editing">
+                <h2>Video Editing</h2>
+           </div>
+
+           <div class="box_service">
+                <img src="img/system.png" title="Create System">
+                <h2>System</h2>
+           </div>
+        </div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <button class="btnVisit" id="visit_more">Visit More</button>
+        </div>
+    </div>
+    <script>
+        const visitMore = document.getElementById('visit_more');
+        visitMore.addEventListener('click' , function(){
+            window.location.href = 'service.html';
+        });
+
+    </script>
+
+    <div class="contact_box">
+        <div class="contact_info">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/mjkynvae" method="POST">
+                <div>
+                    <label for="">Name</label><br><br>
+                    <input type="text" name="customer" required>
+                </div><br>
+
+                <div>
+                    <label for="">Email</label><br><br>
+                    <input type="email" name="email" required>
+                </div><br>
+
+                <div>
+                    <label for="" class="discrip">Description</label><br><br>
+                    <textarea name="" id=""  required></textarea>
+                </div>
+
+                <button class="sendSMS" type="submit">Send Messsage</button>
+            </form>
+        </div>
+        <div class="image_contact">
+            <img src="img/svg5.svg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

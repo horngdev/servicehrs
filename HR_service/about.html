@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Div@ Service</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <div>
+        <div class="container_menu">
+            <div>
+                <h1>2Div</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="box_button">
+                <div class="toggle-wrapper" id="languageToggle">
+                    <div class="toggle-highlight"></div>
+                    <div class="toggle-label" id="engLabel">ENG</div>
+                    <div class="toggle-label" id="khLabel">KH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+         const toggle = document.getElementById("languageToggle");
+    const engLabel = document.getElementById("engLabel");
+    const khLabel = document.getElementById("khLabel");
+
+    let isEnglish = true;
+
+    toggle.addEventListener("click", () => {
+      isEnglish = !isEnglish;
+      toggle.classList.toggle("active");
+
+      if (isEnglish) {
+        engLabel.classList.add("active-text");
+        khLabel.classList.remove("active-text");
+      } else {
+        khLabel.classList.add("active-text");
+        engLabel.classList.remove("active-text");
+      }
+    });
+
+    // Set initial active state
+    engLabel.classList.add("active-text");
+    </script>
+
+        <div class="who_we">
+            <div class="image_svg2">
+                <img src="img/svg2.png" alt="">
+            </div>
+            <div class="who_content">
+                <h1>Who we are?</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text <br>
+                    of the printing and typesetting industry. <br>
+                    Lorem Ipsum has been the industry's <br>
+                    standard dummy text ever since the 1500s, <br>
+                    when an unknown printer took a galley of <br>
+                    type and scrambled it to make a type specimen book. <br>
+                </p>
+                <button class="btnMore" id="back_home">Back To Home</button>
+            </div>
+        </div>
+
+        <script>
+            const backTo = document.getElementById('back_home');
+            backTo.addEventListener('click', function () {
+                window.location.href = 'home.html';
+            });
+        </script>
+    
+
+        <div class="development">
+            <h1>Who are Develop?</h1>
+            <div class="div_photos">
+                <div class="image_dev">
+                    <img src="img/pro2.jpg" alt="">
+                    <h1>Sokny Lyhorng</h1>
+                </div>
+                <div class="image_dev">
+                    <img src="img/pro1.jpg" alt="">
+                    <h1>Seth Ratana</h1>
+                </div>
+            </div>
+            <div class="develop_content">
+                <p>
+                    Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text
+                    of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s,<br><br>
+                    
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                    of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's
+                </p>
+                <br>
+                <p>
+                    Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text
+                    of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s,<br><br>
+                    
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                    of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's
+                </p>
+                <br>
+                <p>
+                    Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text
+                    of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s,<br><br>
+                    
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                    of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's
+                </p>
+            </div>
+        </div>
+</body>
+</html>

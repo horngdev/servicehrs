@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Div@ Service</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <div>
+        <div class="container_menu">
+            <div>
+                <h1>2Div</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="box_button">
+                <div class="toggle-wrapper" id="languageToggle">
+                    <div class="toggle-highlight"></div>
+                    <div class="toggle-label" id="engLabel">ENG</div>
+                    <div class="toggle-label" id="khLabel">KH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+         const toggle = document.getElementById("languageToggle");
+    const engLabel = document.getElementById("engLabel");
+    const khLabel = document.getElementById("khLabel");
+
+    let isEnglish = true;
+
+    toggle.addEventListener("click", () => {
+      isEnglish = !isEnglish;
+      toggle.classList.toggle("active");
+
+      if (isEnglish) {
+        engLabel.classList.add("active-text");
+        khLabel.classList.remove("active-text");
+      } else {
+        khLabel.classList.add("active-text");
+        engLabel.classList.remove("active-text");
+      }
+    });
+
+    // Set initial active state
+    engLabel.classList.add("active-text");
+    </script>
+
+<div class="contact_box">
+    <div class="contact_info">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/mjkynvae" method="POST">
+            <div>
+                <label for="">Name</label><br><br>
+                <input type="text" name="customer" required>
+            </div><br>
+
+            <div>
+                <label for="">Email</label><br><br>
+                <input type="email" name="email" required>
+            </div><br>
+
+            <div>
+                <label for="" class="discrip">Description</label><br><br>
+                <textarea name="" id=""  required></textarea>
+            </div>
+
+            <button class="sendSMS" type="submit">Send Messsage</button>
+        </form>
+    </div>
+    <div class="image_contact">
+        <img src="img/svg5.svg" alt="">
+    </div>
+</div>
+</body>
+</html>

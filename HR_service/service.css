@@ -1,0 +1,81 @@
+
+.service_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    background: #D9D9D9;
+
+}
+.info_service{
+    text-align: center;
+}
+.grid_box{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.box_service{
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.box_service img{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btnVisit{
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #63F7CB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 20px; /* Adjusted top for better spacing */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnVisit:active{
+    transform: scale(0.96);
+    background: rgba(255, 255, 255 , 0.5);
+}
+
+
+.service_display{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center ;
+    margin-top: 50px;
+}
+
+.box_service_small{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.box_service_small img{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -1,0 +1,334 @@
+
+
+.info_first{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}
+.info_para{
+    position: relative;
+    top: 20px;
+}
+
+.info_para h1{
+    font-size: 50pt;
+    margin-left: -20px;
+}
+.info_para h2{
+    font-size: 40pt;
+    margin-left: 20px;
+    margin-top: -35px;
+}
+.info_para p{
+    margin-left: 40px;
+    margin-top: -20px;
+}
+.btnRATE{
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #63F7CB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 10px;
+    transition: all 0.2s ease;
+}
+.btnRATE:active{
+    transform: scale(0.96);
+    background: rgba(255, 255, 255 , 0.5);
+}
+
+
+.image_svg1 img{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 60px;
+}
+.servicemodal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+
+.modal_content{
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 15%;
+    margin-left: 30%;
+}
+.boxicons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bx {
+    font-size: 35pt;
+    color: #000; /* Default color white */
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.bx.selected {
+    color: #eee938 !important; /* Yellow color for selected stars */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.btnSub{
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #63F7CB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 20px; /* Adjusted top for better spacing */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btnSub:active{
+    transform: scale(0.96);
+    background: rgba(255, 255, 255 , 0.5);
+}
+/* 
+Information who we are? */
+.who_we{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: #D9D9D9;
+    top: 50px;
+}
+
+.image_svg2 img{
+    width: 600px;
+    height: 500px;
+    
+}
+.who_content h1{
+    font-size: 40pt;
+    position: relative;
+    left: -50px;
+}
+.btnMore{
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #63F7CB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 20px; /* Adjusted top for better spacing */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btnMore:active{
+    transform: scale(0.96);
+    background: rgba(255, 255, 255 , 0.5);
+}
+
+/* discover */
+.discover{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 100px;
+   
+}
+.image_svg2 {
+    margin-left: 50px;
+}
+.image_svg2 img{
+    width: 600px;
+    height: 500px;
+}
+
+
+.service_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    background: #D9D9D9;
+   margin-top: 100px;
+
+}
+.info_service{
+    text-align: center;
+}
+.grid_box{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.box_service{
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.box_service img{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btnVisit{
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #63F7CB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 20px; /* Adjusted top for better spacing */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnVisit:active{
+    transform: scale(0.96);
+    background: rgba(255, 255, 255 , 0.5);
+}
+.contact_box{
+    width: 100%;
+    height: 600px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact_info{
+    width: 400px;
+    height: 500px;
+    background: #63F7CB;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+label{
+    margin-left: -250px;
+    font-size: 18pt;
+}
+
+input{
+    width: 260px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding-left: 20px;
+}
+
+textarea{
+    width: 260px;
+    height: 80px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding-left: 20px;
+}
+
+.sendSMS{
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #63F7CB;
+    border: none;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 20px; /* Adjusted top for better spacing */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sendSMS:active{
+    transform: scale(0.96);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.discrip{
+    margin-left: -200px;
+}
+
+.image_contact img{
+    width: 600px;
+    height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .info_first {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image_svg1 img {
+        width: 100%;
+        height: auto;
+    }
+    .who_we {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .image_svg2 img {
+        width: 100%;
+    }
+}
